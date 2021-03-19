@@ -1,16 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+:root {
+  --boarder-color: #005db4;
+  --fill-color: #78bdfd;
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: #197cda;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  margin: 40px;
+}
+
+h1 {
+  margin: 10px 0 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.cup {
+  background-color: whitesmoke;
+  color: var(--boarder-color);
+  border: 4px solid var(--boarder-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
   overflow: hidden;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  font-size: 15x;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 0.3s ease;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cup.cup-small.full {
+  color: white;
+  background-color: var(--fill-color);
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.remained span {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.remained small {
+  font-size: 18px;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  height: 0;
+  transition: 0.3s ease;
+}
+
+.text{
+  margin: 0 0px;
 }
